@@ -5,14 +5,15 @@
 Menu
 </h3>
 
-<img href="/pics_android_menu/img10"/>
+<img src="./pics_android_menu/img10.jpg">
+
 <h3>
 Gallery
 </h3>
-<img href="/pics_android_menu/img20"/>
+<img src="./pics_android_menu/img20.jpg">
 
 
 <h3>
 conversion
 </h3>
-<img href="/pics_android_menu/img30"/>
+<img src="./pics_android_menu/img30.jpg">
