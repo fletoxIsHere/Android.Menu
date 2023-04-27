@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ConversionFragment extends Fragment {
@@ -34,13 +35,19 @@ public class ConversionFragment extends Fragment {
         EditText input = (EditText)rootView.findViewById(R.id.input);
         TextView res = (TextView)rootView.findViewById(R.id.res);
         Log.d("hofr", "oncreate");
-
+//        input.setText("0");
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("hofr", "button clicked");
-                input.setText("0");
+                if(input.getText().toString().equals("")) {
+                    Toast.makeText(getActivity(), "please enter amount!",
+                            Toast.LENGTH_LONG).show();
+                    return;
+
+                }
+
                 float inputValue = Float.parseFloat(input.getText().toString());
                 float result = inputValue *10.5F;
                 res.setText(String.valueOf(result)+ "DH");
